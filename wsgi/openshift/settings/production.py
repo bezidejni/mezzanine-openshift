@@ -4,6 +4,7 @@ from settings import *
 DEBUG = True
 ROOT_URLCONF = "%s.urls" % PROJECT_DIRNAME
 
+ALLOWED_HOSTS = ['.rhcloud.com',]
 
 DATABASES = {
     'default': {
