@@ -11,3 +11,6 @@ if [ ! -d $OPENSHIFT_DATA_DIR/media ]; then
 fi
 
 ln -sf $OPENSHIFT_DATA_DIR/media $OPENSHIFT_REPO_DIR/wsgi/static/media
+
+source ${OPENSHIFT_PYTHON_DIR}virtenv/bin/activate
+${OPENSHIFT_PYTHON_DIR}virtenv/bin/pip install --no-index --find-links=${OPENSHIFT_REPO_DIR}libs/requirements  -r ${OPENSHIFT_REPO_DIR}libs/requirements.txt
